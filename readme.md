@@ -10,19 +10,18 @@ $ diskutil info /dev/disk1s2 | grep UUID
 Disk / Partition UUID:    [UUID]
 ```
 2. Replace [UUID] with your own in mount/eject apps (unzip and open with automator), .wakeup and second-drive-utility.plist.
-3. Copy second-drive-utility.plist into Library/LaunchAgents.
+3. Load script to launch on boot.
 ```console
 $ cp  second-drive-utility.plist ~/Library/LaunchAgents
-```
-4. Load script to launch on boot.
-```console
 $ sudo launchctl load -w ~/Library/LaunchAgents/second-drive-utility.plist
 ```
-5. Insall sleepwatcher to prevent HDD to activate on wake.
+4. Insall sleepwatcher to prevent HDD to activate on wake.
 ```console
 $ brew install sleepwatcher
 $ brew services start sleepwatcher
 $ cp .wakeup ~/.wakeup
 ```
+5. You can easily mount and eject the disk manually copying mount/eject apps to Applications/Utilities and using spotlight.
 
-You can easily mount and eject the disk manually copying mount/eject apps to Applications/Utilities and using spotlight.
+
+*Icons by David Lanham at [Iconfactory](https://iconfactory.com/freeware/preview/amra)*

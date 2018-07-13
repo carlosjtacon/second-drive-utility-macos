@@ -2,7 +2,7 @@
 
 Mount and eject internal second drive with ease. Unmounted by default to avoid hdd noise.
 
-1. Get disk UUID.
+1. Get disk UUID (Via Terminal.app or DiskUtility.app).
 ```console
 $ diskutil list
 Apple_HFS HDD                     499.8 GB   disk1s2

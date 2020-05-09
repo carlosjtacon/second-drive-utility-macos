@@ -13,6 +13,8 @@ Disk / Partition UUID:    [UUID]
 3. Load script to launch on boot.
 ```console
 $ cp  second-drive-utility.plist ~/Library/LaunchAgents
+$ sudo chmod 600 ~/Library/LaunchAgents/second-drive-utility.plist
+$ sudo chown root ~/Library/LaunchAgents/second-drive-utility.plist
 $ sudo launchctl load -w ~/Library/LaunchAgents/second-drive-utility.plist
 ```
 4. Insall sleepwatcher to prevent HDD to activate on wake.
